@@ -1,6 +1,6 @@
 import java.io.Serializable;
 
-public class Usuari implements Serializable{
+public class Usuari implements Serializable {
 
     protected int id;
     protected String nom;
@@ -10,18 +10,11 @@ public class Usuari implements Serializable{
     protected String poblacio;
     protected String dataNaiximent;
     protected Roles rolUsuari;
-    
 
-    protected static int contador=0;
-
-
-    
-
-    public Usuari(String nom, String cognoms, String correuElectronic, String contrasenya, 
+    public Usuari(int id, String nom, String cognoms, String correuElectronic, String contrasenya, 
                   String poblacio, String dataNaiximent, Roles rolUsuari) {
 
-        contador++;
-        this.id = contador;
+        this.id = id;
         this.nom = nom;
         this.cognoms = cognoms;
         this.correuElectronic = correuElectronic;
@@ -29,7 +22,6 @@ public class Usuari implements Serializable{
         this.poblacio = poblacio;
         this.dataNaiximent = dataNaiximent;
         this.rolUsuari = rolUsuari;
-        
     }
 
     public String nombreCompleto(){
@@ -98,14 +90,6 @@ public class Usuari implements Serializable{
 
     public void setRolUsuari(Roles rolUsuari) {
         this.rolUsuari = rolUsuari;
-    }
-
-    public static int getContador() {
-        return contador;
-    }
-
-    public static void setContador(int contador) {
-        Usuari.contador = contador;
     }
     
 

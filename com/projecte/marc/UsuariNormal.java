@@ -1,17 +1,18 @@
 import java.util.ArrayList;
 
 public class UsuariNormal extends Usuari {
+    private static final long serialVersionUID = 1L;
 
-    private ArrayList<Pelicula> peliculas;
-    private ArrayList<Actor> actores;
-    private ArrayList<Director> directores;
+    private ArrayList<Pelicula> peliculesPersonals;
+    private ArrayList<Actor> actorsPersonals;
+    private ArrayList<Director> directorsPersonals;
 
-    public UsuariNormal(String nom, String cognoms, String correu, String contrasenya,
+    public UsuariNormal(int id, String nom, String cognoms, String correu, String contrasenya,
                         String poblacio, String dataNaixement) {
-        super(nom, cognoms, correu, contrasenya, poblacio, dataNaixement, Roles.RolUsuari);
+        super(id, nom, cognoms, correu, contrasenya, poblacio, dataNaixement, Roles.RolUsuari);
 
-        this.peliculas = new ArrayList<>();
-        this.actores = new ArrayList<>();
-        this.directores = new ArrayList<>();
+        this.peliculesPersonals = new ArrayList<>();
+        this.actorsPersonals = new ArrayList<>();
+        this.directorsPersonals = new ArrayList<>();
     }
 }
